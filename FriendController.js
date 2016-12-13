@@ -1,8 +1,26 @@
 angular.module('allMyFriends')
 .controller('mainCtrl', function($scope) {
-    // var sortProp = "something";
-    // var sortDirection = "something";
     
+    // This is the piece necessary for the Black Diamond for this project. I created this array to use the ng-options notation, which replaces the same functionality of the ng-model with ng-repeat. 
+    $scope.options = [
+      {name: "Name",
+      value: "name"
+      },
+      {name: "#Friends",
+      value:"friend_count"
+      },
+      {name: "City",
+      value:"current_location.city"
+      },
+      {name: "State",
+      value:"current_location.state"
+      },
+      {name: "Country",
+      value:"current_location.country"
+      }
+    ]
+
+
     $scope.friends = [
   {
     "name": "Preston McNeil",
